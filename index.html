@@ -21,23 +21,23 @@
                </a>
                <nav class="header__nav" id="menu">
                   <ul class="header__links">
-                     <li class="header__link">
+                     <li class="header__link link">
                         <a href="/">Наша команда</a>
                      </li>
-                     <li class="header__link">
+                     <li class="header__link link">
                         <a href="/">Что мы предлагаем</a>
                      </li>
-                     <li class="header__link">
+                     <li class="header__link link">
                         <a href="/">Цены</a>
                      </li>
-                     <li class="header__link">
+                     <li class="header__link link">
                         <a href="/">Преимущества</a>
                      </li>
-                     <li class="header__link">
+                     <li class="header__link link">
                         <a href="/">Контакты</a>
                      </li>
                   </ul>
-                  <button//localhost:5500/index.html
+                  <button
                      class="header__close-menu"
                      id="closeMenuBtn"
                      title="Закрыть меню"
@@ -130,33 +130,41 @@
          </div>
          <ul class="stats">
             <li class="stats__item">
-               <p class="stats__item-title">Больше</p>
-               <p class="stats__item-value">1000</p>
-               <p class="stats__item-desc">
-                  Потенциальных клиентов, полностью заполнивших анкету
-               </p>
+               <div class="wrapper">
+                  <p class="stats__item-title">Больше</p>
+                  <p class="stats__item-value">1000</p>
+                  <p class="stats__item-desc">
+                     Потенциальных клиентов, полностью заполнивших анкету
+                  </p>
+               </div>
             </li>
             <li class="stats__item">
-               <p class="stats__item-title">Звонки</p>
-               <p class="stats__item-value">50.000</p>
-               <p class="stats__item-desc">
-                  Ежедневно обрабатывается огромное количество номеров
-               </p>
+               <div class="wrapper">
+                  <p class="stats__item-title">Звонки</p>
+                  <p class="stats__item-value">50.000</p>
+                  <p class="stats__item-desc">
+                     Ежедневно обрабатывается огромное количество номеров
+                  </p>
+               </div>
             </li>
             <li class="stats__item">
-               <p class="stats__item-title">Сотрудники</p>
-               <p class="stats__item-value">150</p>
-               <p class="stats__item-desc">
-                  У нас огромная дружная семья, где все работают на качество
-                  услуг
-               </p>
+               <div class="wrapper">
+                  <p class="stats__item-title">Сотрудники</p>
+                  <p class="stats__item-value">150</p>
+                  <p class="stats__item-desc">
+                     У нас огромная дружная семья, где все работают на качество
+                     услуг
+                  </p>
+               </div>
             </li>
             <li class="stats__item">
-               <p class="stats__item-title">Отклик базы</p>
-               <p class="stats__item-value">69%</p>
-               <p class="stats__item-desc">
-                  Не бывает "мертвых" баз, бывают плохие скрипты
-               </p>
+               <div class="wrapper">
+                  <p class="stats__item-title">Отклик базы</p>
+                  <p class="stats__item-value">69%</p>
+                  <p class="stats__item-desc">
+                     Не бывает "мертвых" баз, бывают плохие скрипты
+                  </p>
+               </div>
             </li>
          </ul>
       </section>
@@ -250,7 +258,10 @@
                   <div class="offers__item-name">
                      Какой график я могу выбрать?
                      <div class="offers__item-icon">
-                        <img src="./assets/icons/plus.svg" alt="Открыть/закрыть" />
+                        <img
+                           src="./assets/icons/plus.svg"
+                           alt="Открыть/закрыть"
+                        />
                      </div>
                   </div>
                   <p class="offers__item-text">
@@ -264,7 +275,10 @@
                   <div class="offers__item-name">
                      На какую зп я могу рассчитывать, работая в RSGroup?
                      <div class="offers__item-icon">
-                        <img src="./assets/icons/plus.svg" alt="Открыть/закрыть" />
+                        <img
+                           src="./assets/icons/plus.svg"
+                           alt="Открыть/закрыть"
+                        />
                      </div>
                   </div>
                   <p class="offers__item-text">
@@ -278,7 +292,10 @@
                   <div class="offers__item-name">
                      На какую зп я могу рассчитывать, работая в RSGroup?
                      <div class="offers__item-icon">
-                        <img src="./assets/icons/plus.svg" alt="Открыть/закрыть" />
+                        <img
+                           src="./assets/icons/plus.svg"
+                           alt="Открыть/закрыть"
+                        />
                      </div>
                   </div>
                   <p class="offers__item-text">
@@ -292,7 +309,10 @@
                   <div class="offers__item-name">
                      Какой карьерный рост может предложить ваша компания?
                      <div class="offers__item-icon">
-                        <img src="./assets/icons/plus.svg" alt="Открыть/закрыть" />
+                        <img
+                           src="./assets/icons/plus.svg"
+                           alt="Открыть/закрыть"
+                        />
                      </div>
                   </div>
                   <p class="offers__item-text">
@@ -320,7 +340,9 @@
       <section class="price group">
          <div class="price__content wrapper group-content">
             <h2 class="price__title title">Наши цены</h2>
-            <p class="price__desc desc">Вы можете выбрать любой подходящий вам пакет</p>
+            <p class="price__desc desc">
+               Вы можете выбрать любой подходящий вам пакет
+            </p>
          </div>
          <ul class="prices">
             <li class="prices__item">
@@ -329,25 +351,29 @@
                      <p class="prices__item-title">Маленький</p>
                      <p class="prices__item-price">3₽/строка</p>
                   </header>
-                  <p class="prices__item-desc">Обзвон базы размером до 10.000 строк</p>
+                  <p class="prices__item-desc">
+                     Обзвон базы размером до 10.000 строк
+                  </p>
                   <footer class="prices__item-footer">
-                     <a class="prices__item-action" href="#">Заказать</a>
+                     <a class="prices__item-action link" href="#">Заказать</a>
                      <a class="prices__item-link" href="#">Узнать подробнее</a>
                   </footer>
                </div>
             </li>
             <li class="prices__item">
-              <div class="wrapper">
+               <div class="wrapper">
                   <header class="prices__item-header">
                      <p class="prices__item-title">Средний *</p>
                      <p class="prices__item-price">2₽/строка</p>
                   </header>
-                  <p class="prices__item-desc">Обзвон базы размером до 50.000 строк</p>
+                  <p class="prices__item-desc">
+                     Обзвон базы размером до 50.000 строк
+                  </p>
                   <footer class="prices__item-footer">
-                     <a class="prices__item-action" href="#">Заказать</a>
+                     <a class="prices__item-action link" href="#">Заказать</a>
                      <a class="prices__item-link" href="#">Узнать подробнее</a>
                   </footer>
-              </div>
+               </div>
             </li>
             <li class="prices__item">
                <div class="wrapper">
@@ -355,14 +381,74 @@
                      <p class="prices__item-title">Маленький</p>
                      <p class="prices__item-price">3₽/строка</p>
                   </header>
-                  <p class="prices__item-desc">Обзвон базы размером до 10.000 строк</p>
+                  <p class="prices__item-desc">
+                     Обзвон базы размером до 10.000 строк
+                  </p>
                   <footer class="prices__item-footer">
-                     <a class="prices__item-action" href="#">Заказать</a>
+                     <a class="prices__item-action link" href="#">Заказать</a>
                      <a class="prices__item-link" href="#">Узнать подробнее</a>
                   </footer>
                </div>
             </li>
          </ul>
+         <div class="price__quote">
+            <div class="price__quote-content wrapper">
+               <p class="price__text">
+                  Цена зависит от размера базы для прозвона. Больше база - ниже
+                  цена за звонок!
+               </p>
+            </div>
+         </div>
+      </section>
+
+      <section class="advantages">
+         <div class="wrapper">
+            <div class="advantages__content group-content">
+               <h2 class="advantages__title title">Преимущества</h2>
+               <div class="advantages__cards">
+                  <div class="advantages__card">
+                     <h3 class="advantages__card-title">
+                        Только результат
+                     </h3>
+                     <p class="advantages__card-desc">
+                        Вы платите только за результат, никакой поминутной тарификации
+                     </p>
+                  </div>
+                  <div class="advantages__card">
+                     <h3 class="advantages__card-title">
+                        Технологии
+                     </h3>
+                     <p class="advantages__card-desc">
+                        Только самые современные технологии в индустрии Call-центров
+                     </p>
+                  </div>
+                  <div class="advantages__card">
+                     <h3 class="advantages__card-title">
+                        База клиентов
+                     </h3>
+                     <p class="advantages__card-desc">
+                        Собственная база клиентов, более чем с 10.000.000 контактов
+                     </p>
+                  </div>
+                  <div class="advantages__card">
+                     <h3 class="advantages__card-title">
+                        Обучение и контроль
+                     </h3>
+                     <p class="advantages__card-desc">
+                        Собственный учебный центр и специализированный отдел контроля качества
+                     </p>
+                  </div>
+                  <div class="advantages__card">
+                     <h3 class="advantages__card-title">
+                        Экспертность
+                     </h3>
+                     <p class="advantages__card-desc">
+                        Управленцы высокого класса с опытом более 10 лет
+                     </p>
+                  </div>
+               </div>
+            </div>
+         </div>
       </section>
 
       <script src="./scripts/accordion.js"></script>
