@@ -13,6 +13,27 @@
    width: 100px;
 }
 
+/* Inputs */
+
+.input {
+   padding: 5px;
+   border-bottom: 1px solid var(--color-primary-200);
+   color: var(--color-secondary-500);
+}
+
+.input::placeholder{
+   color: var(--color-secondary-200);
+   transition: color 0.15s linear;
+}
+
+.input:focus::placeholder{
+   color: rgba(0,0,0,0);
+}
+
+.input--icon{
+   padding: 5px 5px 5px 32px;
+}
+
 /* Link */
 
 .link{
@@ -204,12 +225,43 @@
    gap: 4px;
 }
 
+.companies__row img{
+   display: block;
+   aspect-ratio: 2 / 1;
+   min-width: 30%;
+   max-width: 30%;
+   object-fit: cover;
+}
+
+.companies__row:hover{
+   animation-play-state: paused;
+}
+
 .companies__row:nth-child(odd) {
-   animation: imageSliderLeft 1s linear infinite;
+   animation: imageSliderLeft 3s linear infinite;
+  
 }
 
 .companies__row:nth-child(even){
-   animation: imageSliderRight 2s linear infinite;
+   animation: imageSliderRight 3s linear infinite;
+}
+
+@keyframes imageSliderLeft {
+   from {
+      transform: translate3d(0, 0, 0)
+   }  
+   to {
+      transform: translate3d(-124%, 0, 0) /* Изменить первое значение translate3d если прыгает анимация */
+   }
+}
+
+@keyframes imageSliderRight {
+   from {
+      transform: translate3d(-124%, 0, 0) /* Изменить первое значение translate3d если прыгает анимация */
+   }  
+   to {
+      transform: translate3d(0, 0, 0) 
+   }
 }
 
 /* STATS */
@@ -484,7 +536,48 @@
    color: var(--color-primary-900);
 }
 
-/* Media queries */
+/* Contact form */
+
+.contact-form__buttons{
+   display: flex;
+   gap: 8px;
+   margin-bottom: 14px;
+}
+
+.contact-form__button{
+   flex-grow: 1;
+   padding: 8px;
+   background-color: var(--color-primary-100);
+   color: var(--color-secondary-500);
+   transition: background-color 0.15s linear;
+}
+
+.contact-form__input{
+   width: 100%;
+   margin-bottom: 8px;
+}
+
+.contact-form__submit{
+   width: 100%;
+   padding: 8px;
+   background-color: var(--color-primary-200);
+}
+
+/* Hover */
+
+@media (hover:hover) {
+   .contact-form__button:hover{
+      background-color: var(--color-primary-300);
+   }
+}
+
+@media (hover:none) {
+   .contact-form__button:active{
+      background-color: var(--color-primary-200);
+   }
+}
+
+/* Adaptability */
 
 @media screen and (min-width: 1000px) {
    .burger{
