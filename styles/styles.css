@@ -6,6 +6,10 @@
    margin: 0 auto;
 }
 
+.desktop-wrapper{
+   display: contents;
+}
+
 /* Logo */
 
 .logo {
@@ -21,39 +25,47 @@
    color: var(--color-secondary-500);
 }
 
-.input::placeholder{
+.input::placeholder {
    color: var(--color-secondary-200);
    transition: color 0.15s linear;
 }
 
-.input:focus::placeholder{
-   color: rgba(0,0,0,0);
+.input:focus::placeholder {
+   color: rgba(0, 0, 0, 0);
 }
 
-.input--icon{
+.input--icon {
    padding: 5px 5px 5px 32px;
 }
 
 /* Link */
 
-.link{
+.link {
    position: relative;
 }
 
 .link::before {
-   content: '';
+   content: "";
    position: absolute;
    bottom: -3px;
    left: 0;
    width: 100%;
    height: 1px;
-   background-color: var(rgba(0,0,0,0));
-   transition: background-color 0.15s linear;
+   background-color: var(rgba(0, 0, 0, 0));
+   transition: all 0.15s linear;
    z-index: inherit;
 }
 
 .link:hover::before {
    background-color: var(--color-secondary-500);
+}
+
+.link--bold::before {
+   transform: translateY(5px);
+}
+
+.link--bold:hover::before {
+   transform: translateY(0);
 }
 
 /* Header */
@@ -67,7 +79,7 @@
    transition: background-color 0.15s linear;
 }
 
-.header--filled{
+.header--filled {
    background-color: var(--color-primary-100);
    border-bottom: var(--color-primary-300) 1px solid;
 }
@@ -99,8 +111,8 @@
    z-index: 999;
 }
 
-.header__link a{
-   color: var(--color-secondary-500)
+.header__link a {
+   color: var(--color-secondary-500);
 }
 
 .header__nav--opened {
@@ -139,16 +151,29 @@
 /* Intro */
 
 .intro {
+   position: relative;
    display: flex;
    flex-direction: column;
    height: 100%;
-   min-height: 510px;
-   background: linear-gradient(190deg, #13071b 0%, #1a0725 12%, #370953 93%);
+   min-height: 70vh;
+   /* background: linear-gradient(190deg, #13071b 0%, #1a0725 12%, #370953 93%); */
+   background: url("https://optim.tildacdn.com/tild3838-6535-4230-b761-643565383262/-/format/webp/BackGround.jpg") center center / cover;
+}
+
+.intro::before{
+   content: '';
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   backdrop-filter: brightness(0.62);
+   z-index: 1;
 }
 
 .intro > .wrapper {
+   position: relative;
    display: flex;
    flex-direction: column;
+   z-index: 2;
 }
 
 .intro__content {
@@ -159,8 +184,8 @@
 }
 
 .intro__about {
-   margin: auto 0;
    justify-self: center;
+   margin: auto 0;
    text-align: center;
 }
 
@@ -168,13 +193,13 @@
    color: var(--color-primary-500);
    font-size: 46px;
    text-transform: uppercase;
+   text-shadow: 0 0 2px var(--color-primary-500);
 }
 
 .intro__desc {
-   color: var(--color-primary-900);
+   color: var(--color-secondary-500);
    font-size: 30px;
    text-align: center;
-   text-transform: uppercase;
 }
 
 .intro__advantage {
@@ -185,6 +210,7 @@
 
 .intro__advantage-text .highlight {
    color: var(--color-primary-600);
+   font-family: var(--secondary-font);
 }
 
 /* Group */
@@ -194,7 +220,7 @@
    padding-top: 40px;
 }
 
-.title{
+.title {
    text-align: center;
    text-transform: uppercase;
 }
@@ -206,6 +232,10 @@
 }
 
 /* Companies */
+
+.companies-desktop {
+   display: none;
+}
 
 .companies {
    display: flex;
@@ -225,55 +255,62 @@
    gap: 4px;
 }
 
-.companies__row img{
+.companies__row img {
    display: block;
-   aspect-ratio: 2 / 1;
    min-width: 30%;
    max-width: 30%;
    object-fit: cover;
 }
 
-.companies__row:hover{
-   animation-play-state: paused;
-}
-
 .companies__row:nth-child(odd) {
-   animation: imageSliderLeft 3s linear infinite;
-  
+   animation: imageSliderLeft 6s linear infinite;
 }
 
-.companies__row:nth-child(even){
-   animation: imageSliderRight 3s linear infinite;
+.companies__row:nth-child(even) {
+   animation: imageSliderRight 6s linear infinite;
 }
 
 @keyframes imageSliderLeft {
    from {
-      transform: translate3d(0, 0, 0)
-   }  
+      transform: translate3d(0, 0, 0);
+   }
    to {
-      transform: translate3d(-124%, 0, 0) /* Изменить первое значение translate3d если прыгает анимация */
+      transform: translate3d(
+         -124%,
+         0,
+         0
+      ); /* Изменить первое значение translate3d если прыгает анимация */
    }
 }
 
 @keyframes imageSliderRight {
    from {
-      transform: translate3d(-124%, 0, 0) /* Изменить первое значение translate3d если прыгает анимация */
-   }  
-   to {
-      transform: translate3d(0, 0, 0) 
+      transform: translate3d(
+         -124%,
+         0,
+         0
+      ); /* Изменить первое значение translate3d если прыгает анимация */
    }
+   to {
+      transform: translate3d(0, 0, 0);
+   }
+}
+
+.companies__row:hover {
+   animation-play-state: paused;
 }
 
 /* STATS */
 
 .stats__item {
    padding: 8px 10px;
-   border: 1px solid var(--color-primary-300) ;
+   border: 1px solid var(--color-primary-300);
    border-width: 1px 0 1px;
    transition: all 0.25s ease;
 }
 
-.stats__item-title, .stats__item-desc {
+.stats__item-title,
+.stats__item-desc {
    color: var(--color-secondary-400);
    font-size: 20px;
 }
@@ -297,44 +334,22 @@
 
 /* TEAM */
 
-.team__items{
+.team__items {
    display: grid;
    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-   gap: 5px;
+   grid-auto-flow: row;
+   gap: 8px;
 }
 
 .team__item {
-   position: relative;
-   z-index: 0;
+   padding: 4px;
    background-color: var(--color-primary-100);
-}
-
-.team__item:hover {
-   padding: 4px;
-}
-
-.team__item-text {
-   display: none;
-   position: absolute;
-   bottom: 0;
-   left: 0;
-   z-index: 1;
-   padding: 4px;
 }
 
 .team__item-image {
    width: 100%;
-   height: 100%;
+   aspect-ratio: 1 / 2;
    object-fit: cover;
-}
-
-.team__item:hover > .team__item-image {
-   width: 171px;
-   height: 285px;
-}
-
-.team__item:hover > .team__item-text {
-   display: block;
 }
 
 .team__item-position {
@@ -351,17 +366,29 @@
 
 /* Offers */
 
-.offers__item{
-   padding: 14px 14px 0 14px;
+.offers__items-wrapper {
+   display: contents;
+}
+
+.offers__item:first-child {
+   border-top: 2px solid var(--color-primary-300);
+}
+
+.offers__item:last-child {
+   border-bottom: 2px solid var(--color-primary-300);
+}
+
+.offers__item {
    border-top: 1px solid var(--color-primary-300);
    border-bottom: 1px solid var(--color-primary-300);
    transition: background-color 0.15s linear;
 }
 
-.offers__item-name{
+.offers__item-name {
    display: flex;
    justify-content: space-between;
    gap: 10px;
+   padding: 15px 0 15px 0;
    list-style: none;
    font-size: 20px;
    cursor: pointer;
@@ -370,7 +397,7 @@
    transition: color 0.15s linear;
 }
 
-.offers__item-icon{
+.offers__item-icon {
    display: flex;
    align-items: center;
    justify-content: center;
@@ -388,17 +415,17 @@
    transform: rotate(45deg);
 }
 
-.offers__item--opened{
+.offers__item--opened {
    background-color: var(--color-primary-100);
 }
 
-.offers__item-icon img{
+.offers__item-icon img {
    width: 11px;
 }
 
-.offers__item-text{
-   padding-top: 5px;
-   margin-bottom: 14px;
+.offers__item-text {
+   margin-bottom: 15px;
+   padding-right: 40px;
    max-height: 0;
    font-size: 16px;
    color: var(--color-secondary-500);
@@ -406,8 +433,8 @@
    overflow: hidden;
 }
 
-.offers__item--opened .offers__item-name{
-   color: var(--color-primary-900)
+.offers__item--opened .offers__item-name {
+   color: var(--color-primary-900);
 }
 
 /* QUOTE */
@@ -429,13 +456,15 @@
 }
 
 .quote__heading {
+   margin-bottom: 10px;
    font-weight: 600;
    font-size: 20px;
    color: var(--color-primary-900);
 }
 
 .quote__heading .highlight {
-   color: var(--color-primary-500)
+   color: var(--color-primary-500);
+   font-family: var(--secondary-font);
 }
 
 .quote__author {
@@ -445,16 +474,24 @@
 }
 
 /* PRICES */
-.prices{
+.prices {
    margin-bottom: 14px;
 }
 
 .prices__item {
    padding: 8px 0;
-   border: 1px solid var(--color-primary-300) ;
+   border: 1px solid var(--color-primary-300);
    border-width: 1px 0 1px;
-   font-family: 'Inter', sans-serif;
+   font-family: "Inter", sans-serif;
    transition: all 0.25s ease;
+}
+
+.prices__item:first-child {
+   border-top: 2px solid var(--color-primary-300);
+}
+
+.prices__item:last-child {
+   border-bottom: 2px solid var(--color-primary-300);
 }
 
 .prices__item-header {
@@ -499,52 +536,52 @@
    background-color: var(--color-primary-100);
 }
 
-.price__quote{
+.price__quote {
    padding: 8px 0;
    background-color: var(--color-primary-100);
 }
 
-.price__text{
+.price__text {
    padding-left: 26px;
-   background: top 5px left 0px url('../assets/icons/quotes.svg') no-repeat;
+   background: top 5px left 0px url("../assets/icons/quotes.svg") no-repeat;
 }
 
 /* Advantages */
 
-.advantages__title{
+.advantages__title {
    margin-bottom: 14px;
 }
 
-.advantages__cards{
+.advantages__cards {
    display: flex;
    flex-direction: column;
    gap: 10px;
 }
 
-.advantages__card{
+.advantages__card {
    padding: 14px;
    background-color: var(--color-primary-100);
 }
 
-.advantages__card-title{
+.advantages__card-title {
    margin-bottom: 8px;
    font-size: 28px;
    text-transform: uppercase;
 }
 
-.advantages__card-desc{
+.advantages__card-desc {
    color: var(--color-primary-900);
 }
 
 /* Contact form */
 
-.contact-form__buttons{
+.contact-form__buttons {
    display: flex;
    gap: 8px;
    margin-bottom: 14px;
 }
 
-.contact-form__button{
+.contact-form__button {
    flex-grow: 1;
    padding: 8px;
    background-color: var(--color-primary-100);
@@ -552,12 +589,12 @@
    transition: background-color 0.15s linear;
 }
 
-.contact-form__input{
+.contact-form__input {
    width: 100%;
    margin-bottom: 8px;
 }
 
-.contact-form__submit{
+.contact-form__submit {
    width: 100%;
    padding: 8px;
    background-color: var(--color-primary-200);
@@ -565,27 +602,113 @@
 
 /* Hover */
 
-@media (hover:hover) {
-   .contact-form__button:hover{
+@media (hover: hover) {
+   .contact-form__button:hover {
       background-color: var(--color-primary-300);
    }
 }
 
-@media (hover:none) {
-   .contact-form__button:active{
+@media (hover: none) {
+   .contact-form__button:active {
       background-color: var(--color-primary-200);
    }
 }
 
 /* Adaptability */
 
+@media screen and (min-width: 760px) {
+   .logo {
+      width: 175px;
+   }
+
+   .companies-desktop {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 7px;
+   }
+
+   .companies-desktop img {
+      width: 250px;
+   }
+
+   .companies {
+      display: none;
+   }
+
+   .team__items {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+   }
+   .advantages__cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 10px;
+   }
+}
+
+@media screen and (min-width: 900px) {
+   .title:not(.customers__title),
+   .desc:not(.customers__desc) {
+      text-align: left;
+   }
+   .title {
+      font-size: 45px;
+   }
+   .desc {
+      margin-bottom: 18px;
+      font-size: 31px;
+   }
+
+   .mobile-wrapper{
+      display: contents;
+   }
+
+   .desktop-wrapper{
+      display: block;
+   }
+
+   .offers__item {
+      padding: 0 10px;
+   }
+
+   .offers__item-name {
+      padding: 25px 0 20px 0;
+      font-size: 28px;
+   }
+
+   .offers__item-icon {
+      width: 25px;
+      height: 25px;
+      margin-top: 10px;
+   }
+
+   .offers__item-icon img {
+      width: 19px;
+   }
+
+   .offers__item-text {
+      margin-bottom: 25px;
+      padding-right: 50px;
+   }
+
+   .offers__item--opened .offers__item-name {
+      color: var(--color-primary-900);
+   }
+}
+
 @media screen and (min-width: 1000px) {
-   .burger{
+   .group-content {
+      margin-top: 95px;
+   }
+
+   .burger {
       display: none;
    }
 
    .header__nav {
+      position: static;
       display: flex;
+      align-items: center;
       gap: 10px;
       width: auto;
       height: auto;
@@ -595,7 +718,7 @@
       transform: translateX(0);
       z-index: 999;
    }
-   
+
    .header__links {
       display: flex;
       flex-direction: row;
@@ -603,11 +726,17 @@
       gap: 15px;
    }
 
-   .header__close-menu{
+   .header__close-menu {
       display: none;
    }
 
-   .intro{
+   .intro {
       min-height: 100vh;
+   }
+}
+
+@media screen and (min-width: 1050px) {
+   .advantages__cards {
+      grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
    }
 }

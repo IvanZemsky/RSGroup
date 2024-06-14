@@ -1,7 +1,7 @@
 @font-face {
-   font-family: "Jua";
-   src: local('Jua-Regular'), url('../assets/fonts/Jua/Jua-Regular.ttf') format('truetype');
-   font-weight: 400;
+   font-family: "Namu";
+   src: local('Namu'), url('../assets/fonts/Namu/NAMU-1960.ttf') format('truetype');
+   font-weight: 700;
    font-style: normal;
 }
 

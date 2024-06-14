@@ -14,4 +14,7 @@
   --color-secondary-200: #B3B3B3;
   --color-secondary-100: #808080;
   --bg-color: #08010A;
+
+  --primary-font: "Inter", sans-serif;
+  --secondary-font: "Namu", sans-serif;
 }
