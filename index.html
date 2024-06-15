@@ -6,7 +6,9 @@
       <link rel="stylesheet" href="./styles/_vars.css" />
       <link rel="stylesheet" href="./styles/fonts.css" />
       <link rel="stylesheet" href="./styles/reset.css" />
-      <link rel="stylesheet" href="./styles/styles.css" />
+      <link rel="stylesheet" href="./styles/animations.css" />
+      <link rel="stylesheet" href="./styles/components.css" />
+      <link rel="stylesheet" href="./styles/main.css" />
       <title>Document</title>
    </head>
    <body>
@@ -22,13 +24,13 @@
                <nav class="header__nav" id="menu">
                   <ul class="header__links">
                      <li class="header__link link link--bold">
-                        <a href="/">О нас</a>
+                        <a href="#stats">О нас</a>
                      </li>
                      <li class="header__link link link--bold">
-                        <a href="/">Команда</a>
+                        <a href="#team">Команда</a>
                      </li>
                      <li class="header__link link link--bold">
-                        <a href="/">Работа</a>
+                        <a href="#work">Работа</a>
                      </li>
                      <li class="header__link link link--bold">
                         <a href="/">Контакты</a>
@@ -60,11 +62,24 @@
          <div class="wrapper">
             <div class="intro__content">
                <div class="intro__about">
-                  <h1 class="intro__heading">RSGROUP</h1>
-                  <h5 class="intro__desc">Лучшая компания по прозвонам</h5>
+                  <h1
+                     class="intro__heading hidden-for-emergence"
+                     data-animation="vertical-fade-in 1s ease-in-out forwards"
+                  >
+                     RSGROUP
+                  </h1>
+                  <h5
+                     class="intro__desc hidden-for-emergence"
+                     data-animation="vertical-fade-in 1s ease-in-out 0.3s forwards"
+                  >
+                     Лучшая компания по прозвонам
+                  </h5>
                </div>
 
-               <div class="intro__advantage">
+               <div
+                  class="intro__advantage hidden-for-emergence"
+                  data-animation="static-fade-in 1.5s linear 0.1s forwards"
+               >
                   <p class="intro__advantage-text">
                      Работаем с <span class="highlight">2021</span> года
                   </p>
@@ -79,7 +94,12 @@
       <section class="customers">
          <div class="wrapper">
             <div class="customers__content group-content">
-               <h2 class="customers__title title">Наши клиенты</h2>
+               <h2
+                  class="customers__title title hidden-for-emergence"
+                  data-animation="vertical-fade-in 1s ease-out forwards"
+               >
+                  Наши клиенты
+               </h2>
                <p class="customers__desc desc">
                   Мы работаем с множеством известных компаний по всей России
                </p>
@@ -129,9 +149,14 @@
             <img src="/assets/img/company-7.jpg" alt="" />
          </div>
       </section>
-      <section class="stats">
+      <section class="stats" id="stats">
          <div class="stats__content wrapper group-content">
-            <h2 class="stats__title title">Статистика</h2>
+            <h2
+               class="stats__title title hidden-for-emergence"
+               data-animation="vertical-fade-in 1s ease-out forwards"
+            >
+               Статистика
+            </h2>
             <p class="stats__desc desc">
                Мы придерживаемся стратегии win-to-win
             </p>
@@ -178,9 +203,14 @@
             </ul>
          </div>
       </section>
-      <section class="team">
+      <section class="team" id="team">
          <div class="team__content wrapper group-content">
-            <h2 class="team__title title">Наша команда</h2>
+            <h2
+               class="team__title title hidden-for-emergence"
+               data-animation="vertical-fade-in 1s ease-out forwards"
+            >
+               Наша команда
+            </h2>
             <p class="team__desc desc">
                Сотрудники работают для достижения целей высокого качества
             </p>
@@ -255,10 +285,15 @@
          </div>
       </section>
 
-      <section class="offers">
+      <section class="offers" id="work">
          <div class="wrapper">
             <div class="offers__content group-content">
-               <h2 class="offers__title title">Что мы предлагаем</h2>
+               <h2
+                  class="offers__title title hidden-for-emergence"
+                  data-animation="vertical-fade-in 1s ease-out forwards"
+               >
+                  Что мы предлагаем
+               </h2>
                <p class="offers__desc desc">Информация для сотрудников</p>
             </div>
          </div>
@@ -284,7 +319,8 @@
                <li class="offers__item">
                   <div class="wrapper mobile-wrapper">
                      <div class="offers__item-name">
-                        На какую зп я могу рассчитывать, работая в RSGroup?
+                        На какую зарплату я могу рассчитывать, работая в
+                        RSGroup?
                         <div class="offers__item-icon">
                            <img
                               src="./assets/icons/plus.svg"
@@ -350,7 +386,12 @@
 
       <section class="price">
          <div class="price__content wrapper group-content">
-            <h2 class="price__title title">Наши цены</h2>
+            <h2
+               class="price__title title hidden-for-emergence"
+               data-animation="vertical-fade-in 1s ease-out forwards"
+            >
+               Наши цены
+            </h2>
             <p class="price__desc desc">
                Вы можете выбрать любой подходящий вам пакет
             </p>
@@ -367,12 +408,12 @@
                         Обзвон базы размером до 10.000 строк
                      </p>
                      <footer class="prices__item-footer">
-                        <a class="prices__item-action link" href="#"
-                           >Заказать</a
-                        >
-                        <a class="prices__item-link" href="#"
-                           >Узнать подробнее</a
-                        >
+                        <a class="prices__item-action link" href="#">
+                           Заказать
+                        </a>
+                        <a class="prices__item-link link" href="#">
+                           Узнать подробнее
+                        </a>
                      </footer>
                   </div>
                </li>
@@ -386,12 +427,12 @@
                         Обзвон базы размером до 50.000 строк
                      </p>
                      <footer class="prices__item-footer">
-                        <a class="prices__item-action link" href="#"
-                           >Заказать</a
-                        >
-                        <a class="prices__item-link" href="#"
-                           >Узнать подробнее</a
-                        >
+                        <a class="prices__item-action link" href="#">
+                           Заказать
+                        </a>
+                        <a class="prices__item-link link" href="#">
+                           Узнать подробнее
+                        </a>
                      </footer>
                   </div>
                </li>
@@ -405,12 +446,12 @@
                         Обзвон базы размером до 10.000 строк
                      </p>
                      <footer class="prices__item-footer">
-                        <a class="prices__item-action link" href="#"
-                           >Заказать</a
-                        >
-                        <a class="prices__item-link" href="#"
-                           >Узнать подробнее</a
-                        >
+                        <a class="prices__item-action link" href="#">
+                           Заказать
+                        </a>
+                        <a class="prices__item-link link" href="#">
+                           Узнать подробнее
+                        </a>
                      </footer>
                   </div>
                </li>
@@ -429,7 +470,12 @@
       <section class="advantages">
          <div class="wrapper">
             <div class="advantages__content group-content">
-               <h2 class="advantages__title title">Преимущества</h2>
+               <h2
+                  class="advantages__title title hidden-for-emergence"
+                  data-animation="vertical-fade-in 1s ease-out forwards"
+               >
+                  Преимущества
+               </h2>
                <div class="advantages__cards">
                   <div class="advantages__card">
                      <h3 class="advantages__card-title">Только результат</h3>
@@ -472,25 +518,33 @@
 
       <section class="contact-form">
          <div class="contact-form__content wrapper group-content">
-            <h2 class="contact-form__title title">Заинтересовались?</h2>
+            <h2
+               class="contact-form__title title hidden-for-emergence"
+               data-animation="vertical-fade-in 1s ease-out forwards"
+            >
+               Заинтересовались?
+            </h2>
             <p class="contact-firm__desc desc">
                Оставьте заявку и мы с вами свяжемся
             </p>
-            <div class="contact-form__buttons">
-               <button class="contact-form__button">Для сотрудников</button>
-               <button class="contact-form__button">Для клиентов</button>
-            </div>
             <form class="contact-form__form">
-               <input
-                  type="text"
-                  class="contact-form__input input input--icon"
-                  placeholder="+7 (999) 999-99-99"
-               />
-               <input
-                  type="text"
-                  class="contact-form__input input"
-                  placeholder="Ваше имя"
-               />
+               <div class="contact-form__buttons">
+                  <button class="contact-form__button">Для сотрудников</button>
+                  <button class="contact-form__button">Для клиентов</button>
+               </div>
+
+               <div class="contact-form__inputs">
+                  <input
+                     type="text"
+                     class="contact-form__input input"
+                     placeholder="+7 (999) 999-99-99"
+                  />
+                  <input
+                     type="text"
+                     class="contact-form__input input"
+                     placeholder="Ваше имя"
+                  />
+               </div>
                <button class="contact-form__submit" type="submit">
                   Оставить заявку
                </button>
@@ -498,6 +552,7 @@
          </div>
       </section>
 
+      <script src="./scripts/emergence.js"></script>
       <script src="./scripts/accordion.js"></script>
       <script src="./scripts/burgerMenu.js"></script>
       <script src="./scripts/headerScroll.js"></script>
