@@ -16,13 +16,18 @@ const singleElements = [
    document.querySelector(".intro__heading"),
    document.querySelector(".intro__desc"),
    document.querySelector(".intro__advantage"),
+   document.querySelector(".quote__heading"),
 ];
 
-const multipleElements = [document.querySelectorAll(".title")];
+const multipleElements = [
+   document.querySelectorAll(".title"),
+   document.querySelectorAll(".stats__item-value"),
+   document.querySelectorAll(".stats__item-desc"),
+];
 
 singleElements.forEach((element) => observer.observe(element));
 
 multipleElements.forEach((elements) => {
-   console.log(elements)
-   elements.forEach((element) => observer.observe(element))
+   console.log(elements);
+   elements.forEach((element) => observer.observe(element));
 });
