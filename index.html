@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="ru">
    <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="./styles/vars.css">
-      <link rel="stylesheet" href="./styles/fonts.css">
-      <link rel="stylesheet" href="./styles/reset.css">
-      <link rel="stylesheet" href="./styles/animations.css">
-      <link rel="stylesheet" href="./styles/components.css">
-      <link rel="stylesheet" href="./styles/main.css">
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="./styles/vars.css" />
+      <link rel="stylesheet" href="./styles/fonts.css" />
+      <link rel="stylesheet" href="./styles/reset.css" />
+      <link rel="stylesheet" href="./styles/animations.css" />
+      <link rel="stylesheet" href="./styles/components.css" />
+      <link rel="stylesheet" href="./styles/main.css" />
       <title>RSGroup</title>
    </head>
    <body>
@@ -33,7 +33,7 @@
                         <a href="#work">Работа</a>
                      </li>
                      <li class="header__link link link--bold">
-                        <a href="/">Контакты</a>
+                        <a href="#contact">Контакты</a>
                      </li>
                      <li class="header__link link link--bold">
                         <a href="/">Галерея</a>
@@ -505,7 +505,10 @@
             </div>
             <div class="price__quote">
                <div class="price__quote-content wrapper">
-                  <p class="price__text">
+                  <p
+                     class="price__text hidden-for-emergence"
+                     data-animation="vertical-fade-in 1s linear forwards"
+                  >
                      Цена зависит от размера базы для прозвона. Больше база -
                      ниже цена за звонок!
                   </p>
@@ -820,7 +823,7 @@
          </section>
       </main>
 
-      <footer class="contact">
+      <footer class="contact" id="contact">
          <div class="contact__content wrapper group-content">
             <h2
                class="contact__title title hidden-for-emergence"
@@ -828,14 +831,19 @@
             >
                Связь с нами
             </h2>
-            <p class="contact__email">rsgroup@yandex.ru</p>
-            <div class="contact__links">
-               <a href="">YouTube</a>
-               <a href="">Instagram</a>
+            <div class="contact__links-wrap">
+               <a href="mailto:rsgroup@yandex.ru" class="contact__email link">
+                  rsgroup@yandex.ru
+               </a>
+               <div class="contact__links">
+                  <a href="#!" class="link link--bold">YouTube</a>
+                  <a href="#!" class="link link--bold">Instagram</a>
+               </div>
             </div>
          </div>
       </footer>
 
+      <script src="./scripts/telLinks.js"></script>
       <script src="./scripts/emergence.js"></script>
       <script src="./scripts/accordion.js"></script>
       <script src="./scripts/burgerMenu.js"></script>

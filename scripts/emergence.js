@@ -17,6 +17,7 @@ const singleElements = [
    document.querySelector(".intro__desc"),
    document.querySelector(".intro__advantage"),
    document.querySelector(".quote__heading"),
+   document.querySelector(".price__text"),
 ];
 
 const multipleElements = [
@@ -28,6 +29,5 @@ const multipleElements = [
 singleElements.forEach((element) => observer.observe(element));
 
 multipleElements.forEach((elements) => {
-   console.log(elements);
    elements.forEach((element) => observer.observe(element));
 });
