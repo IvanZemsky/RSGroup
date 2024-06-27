@@ -86,7 +86,7 @@
    flex-direction: column;
    height: 100%;
    min-height: 100dvh;
-   background: url("https://optim.tildacdn.com/tild3838-6535-4230-b761-643565383262/-/format/webp/BackGround.jpg")
+   background: url("../assets/img/intro-bg.jpg")
       center center / cover;
 }
 
